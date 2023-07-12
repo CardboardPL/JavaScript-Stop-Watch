@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StopWatch</title>
+  <link rel="stylesheet" href="styles/stopwatch.css">
 </head>
 <body>
   <header>
@@ -12,17 +13,19 @@
 
   <section>
     <div id="timer">
-      <div id="days-count">00</div>
-      <span>:</span>
-      <div id="hours-count">00</div>
-      <span>:</span>
-      <div id="minutes-count">00</div>
-      <span>:</span>
-      <div id="seconds-count">00</div>
+      <div id="days-count"></div>
+      :
+      <div id="hours-count"></div>
+      :
+      <div id="minutes-count"></div>
+      :
+      <div id="seconds-count"></div>
     </div>
 
-    <button class="start-stop-button">Start</button>
-    <button class="reset-button">Reset</button>
+    <div class="button-container">
+      <button class="start-stop-button">Start</button>
+      <button class="reset-button">Reset</button>
+    </div>
   </section>
 </body>
 </html>
