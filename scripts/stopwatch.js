@@ -52,10 +52,14 @@ function startTimer() {
     displayTimer();
     localStorage.setItem('timer', JSON.stringify(timer));
   }, 1000)
+  isToggled = true;
+  startStopButton.innerText = 'Stop';
 }
 
 function stopTimer() {
   clearInterval(intervalId);
+  isToggled = false;
+  startStopButton.innerText = 'Start';
 }
 
 function resetTimer() {
@@ -64,20 +68,15 @@ function resetTimer() {
   timer.minutes = 0;
   timer.seconds = 0;
   localStorage.setItem('timer', JSON.stringify(timer));
-  startStopButton.innerText = 'Start';
   stopTimer();
   displayTimer();
 }
 
 startStopButton.addEventListener('click', () => {
   if (!isToggled) {
-    startTimer();
-    isToggled = true;
-    startStopButton.innerText = 'Stop';
+    startTimer();  
   } else {
-    stopTimer();
-    isToggled = false;
-    startStopButton.innerText = 'Start';
+    stopTimer(); 
   }
 })
 
