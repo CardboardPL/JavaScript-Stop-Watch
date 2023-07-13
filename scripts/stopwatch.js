@@ -64,6 +64,7 @@ function resetTimer() {
   timer.minutes = 0;
   timer.seconds = 0;
   localStorage.setItem('timer', JSON.stringify(timer));
+  startStopButton.innerText = 'Start';
   stopTimer();
   displayTimer();
 }
