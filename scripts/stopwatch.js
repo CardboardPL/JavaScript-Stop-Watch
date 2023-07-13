@@ -26,6 +26,10 @@ function displayTimer() {
 displayTimer();
 
 function startTimer() {
+  if (isToggled) {
+    stopTimer();
+  }
+
   intervalId = setInterval(() => {
     timer.seconds++;
 
